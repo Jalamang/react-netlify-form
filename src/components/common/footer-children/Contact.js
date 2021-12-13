@@ -1,7 +1,25 @@
 import React from "react";
 import './Contact.css'
-export default function Form({currBGColor}) {
-    const styles = {
+
+  class Contact extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = { name: "", company:"", email: "", message: "", role:"", myfile:"" };
+    }
+   
+    handleSubmit = e => {
+     alert("Submission Received!")
+      e.preventDefault();
+    };
+
+    handleChange = e => {this.setState({ [e.target.name]: e.target.value })
+  console.log(e.target.value)
+  e.preventDefault();
+  };
+
+    render() {
+      console.log(this.props)
+       const styles = {
         width:"650px",
          height:"410px",
           style:"border:0",
@@ -9,23 +27,35 @@ export default function Form({currBGColor}) {
            loading:"lazy"
     };
 
+      const { currBGColor, name, company, email, role, myfile, message} = this.state;
   return (
     <main>
-    <div className="contact" style={{ backgroundColor: currBGColor }}>
+    <div className="contact" 
+    style={{ backgroundColor: currBGColor }}
+    >
       <section> <h3>Get In Touch</h3>
         <div class="showcase-form">
             
-    <form name="contact" method="post">
-        <input type="hidden" name="form-name" value="contact" />
+    <form onSubmit={this.handleSubmit} name="contact" method="post">
+        <input 
+        type="hidden" 
+        name="form-name" 
+        value="contact" />
       
         <label htmlFor="name">
-        <input type="text" id="name" name="name"placeholder="Name" required />
+        <input type="text" 
+        id="name" 
+        name={name}
+        // value={name}
+        onChange={this.handleChange}
+        placeholder="Name" required />
         </label> <br />
 
         <label >
                 <input
                   type="text"
-                  name="company"
+                  name={company}
+                  onChange={this.handleChange}
                   placeholder="Company Name"
                   required
                 />
@@ -33,12 +63,16 @@ export default function Form({currBGColor}) {
      
     
         <label htmlFor="email">
-        <input type="email" name="email" placeholder="Email" required />
+        <input 
+        type="email" 
+        name={email} 
+        placeholder="Email" 
+        required />
         </label> <br />
 
         <label>
                 Your Role : {""}
-                <select name="role[]" multiple>
+                <select  onChange={this.handleChange} name={role} multiple>
                   <option value="Team Lead">Team Lead</option>
                   <option value="Full Stack Developer">Full Stack Developer</option>
                   <option value="Front-End Developer">Front-End Developer</option>
@@ -48,7 +82,12 @@ export default function Form({currBGColor}) {
               <br />
 
               <div class="field">
-                <input type="file" name="myfile" id="myfile" placeholder="Upload file" />
+                <input 
+                type="file" 
+                name={myfile} 
+                id="myfile"
+                onChange={this.handleChange}
+                placeholder="Upload file" />
               </div>
 
               {/* spam filtering */}
@@ -58,11 +97,18 @@ export default function Form({currBGColor}) {
 
       <p>
         <label htmlFor="message">Message:
-        <textarea id="message" name="message" required></textarea>
+        <textarea 
+        id="message" 
+        name={message}
+        onChange={this.handleChange}
+        required></textarea>
         </label> <br />
       </p>
       <p>
-      <input type="submit" value="Send" class="btn" />
+      <input 
+      type="submit" 
+      value="Send" 
+      class="btn" />
       </p>
     </form>
     </div>
@@ -91,5 +137,7 @@ export default function Form({currBGColor}) {
 </div>
 </main>
   );
-}
+}}
+
+export default Contact;
 

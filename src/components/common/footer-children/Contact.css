@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 25px;
-  background-color: rgb(22, 2, 2); 
+  
 } 
 
 .showcase-form form {
@@ -75,6 +75,7 @@ h3 {
     bottom: 90px;
     height: 50%;
     margin-right: 10px;
+    margin-left: 35px;
     width: auto;
     height: auto;
   }

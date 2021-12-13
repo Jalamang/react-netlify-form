@@ -38,3 +38,24 @@ a {
   grid-column: 6/7;
   margin-top: 15px;
 }
+
+@media (max-width: 990px) {
+  .search-bar {
+    grid-column: 5;
+ width: 100px;
+  }
+  .youtube-logo{
+    width: 25px;
+    height: auto;
+    margin-right: 5px;
+    margin-left: 20px;
+    margin-top: 5px ;
+  }
+
+
+  .nav-home {
+    grid-column: 2;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+}
