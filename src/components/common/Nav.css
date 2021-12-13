@@ -1,0 +1,40 @@
+/* Jose's css */
+a {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+
+.nav-youtube {
+  grid-column: 1;
+}
+
+.youtube-logo{
+  width: 90px;
+  height: auto;
+  margin-right: 30px;
+  margin-left: 110px;
+  margin-top: 5px ;
+}
+
+.nav-home {
+  grid-column: 2;
+  margin-top: 5px;
+  margin-right: 30px;
+}
+
+.home-logo {
+  width: 30px;
+  height: auto;
+}
+
+.search-bar {
+ grid-column: 5;
+ width: 800px;
+}
+
+.color-switch {
+  grid-column: 6/7;
+  margin-top: 15px;
+}

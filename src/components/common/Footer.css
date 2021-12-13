@@ -1,0 +1,11 @@
+.footer-container{
+    margin-top: 15px;
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+li {
+    list-style: none;
+}
