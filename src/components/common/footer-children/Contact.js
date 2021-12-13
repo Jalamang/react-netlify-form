@@ -57,7 +57,7 @@ export default function Form({currBGColor}) {
               </div>
 
       <p>
-        <label htmlFor="message">
+        <label htmlFor="message">Message:
         <textarea id="message" name="message" required></textarea>
         </label> <br />
       </p>
