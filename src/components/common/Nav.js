@@ -15,7 +15,7 @@ const Nav = ({
   setCurrBGColor,
 }) => {
   return (
-    <nav className="navyoutube">
+    <nav >
         <div className="nav-youtube">
           <Link to="/"><img src ={youtubeLogo} alt='youtube-logo' className="youtube-logo alt="youtube-logo/></Link>
         </div>

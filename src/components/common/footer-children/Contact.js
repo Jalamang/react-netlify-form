@@ -14,26 +14,26 @@ class Contact extends React.Component {
     };
   }
 
-  handleSubmit = (e) => {
-    const { name, company, email, message, role, myfile } = this.state;
-    alert(`Submission Received! 
-      \nName: ${name} 
-      \nCompany: ${company} 
-      \nEmail: ${email}
-      \nMessage: ${message}
-      \nRole: ${role}
-      \nFile Attached: ${myfile}
-      `);
-    this.setState({
-      name: "",
-      company: "",
-      email: "",
-      message: "",
-      role: "",
-      myfile: "",
-    });
-    e.preventDefault();
-  };
+  // handleSubmit = (e) => {
+  //   const { name, company, email, message, role, myfile } = this.state;
+  //   alert(`Submission Received! 
+  //     \nName: ${name} 
+  //     \nCompany: ${company} 
+  //     \nEmail: ${email}
+  //     \nRole: ${role}
+  //     \nFile Attached: ${myfile}
+  //     \nMessage: ${message}
+  //     `);
+  //   this.setState({
+  //     name: "",
+  //     company: "",
+  //     email: "",
+  //     message: "",
+  //     role: "",
+  //     myfile: "",
+  //   });
+  //   e.preventDefault();
+  // };
 
   handleChange = (e) => {
     const { name, value } = e.target;
@@ -65,7 +65,9 @@ class Contact extends React.Component {
             {" "}
             <h3>Get In Touch</h3>
             <div class="showcase-form">
-              <form onSubmit={this.handleSubmit} name="contact" method="post">
+              <form 
+              // onSubmit={this.handleSubmit} 
+              name="contact" method="post">
                 <input type="hidden" name="form-name" value="contact" />
                 <label htmlFor="name">
                   <input
