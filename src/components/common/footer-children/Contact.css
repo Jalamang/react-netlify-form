@@ -1,11 +1,12 @@
-.contact {
+ 
+  .contact {
   display: grid;
-  grid-template-columns: 1fr 0.7fr;
+   grid-template-columns: 0.1fr 0.1fr;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  /* background-color: rgb(22, 2, 2); */
-}
+  gap: 25px;
+  background-color: rgb(22, 2, 2); 
+} 
 
 .showcase-form form {
   width: 310px;
@@ -17,7 +18,7 @@
   padding: 15px;
 }
 .btn:hover {
-  transform: scale(0.98);
+  transform: scale(0.89);
 }
 
 .location {
@@ -57,9 +58,9 @@ h3 {
   color: black;
 }
 
-.social div{
+/* .social div{
   border: 2 solid red;
-}
+} */
 
 @media (max-width: 990px) {
   .contact {
@@ -75,8 +76,7 @@ h3 {
     height: 50%;
     margin-right: 10px;
     width: auto;
-    width: 350px;
-    height: 410px;
+    height: auto;
   }
 
   .showcase-form form {
@@ -86,5 +86,7 @@ h3 {
     border-radius: 10px;
     box-shadow: 0 1px 2px rgb(0, 0, 0.2);
     padding: 5px;
+    width: auto;
+    height: auto;
   }
-}
+} 

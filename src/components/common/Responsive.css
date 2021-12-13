@@ -70,15 +70,15 @@ nav ul li a {
   }
 
 
-  @media only screen and (max-width: 550px) {
-   form nav{
+  @media only screen and (max-width: 990px) {
+   .navyoutube nav{
         width: 95%;
         float: none;
     }
-    .form-searchbar{
-      width: 95%;
-        float: none;
-    }
+    nav {
+      margin-right: 0;
+      margin-bottom: 1em;
+  }
   
 }
 }

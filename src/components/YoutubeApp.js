@@ -22,6 +22,7 @@ const YoutubeApp = () => {
       const response = await fetch(
         `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=16&q=${query}&safeSearch=strict&key=${process.env.REACT_APP_API_KEY}`
       );
+      console.log(response)
       let searches = await response.json();
       searches = searches.items;
       const refinedSearches = searches.map(({ id, snippet }) => {

@@ -1,6 +1,7 @@
-form {
+form.form-searchbar  {
   border-radius: 1em;
   align-items: center;
+  border: 2px solid black;
 }
 
 .input-area {
