@@ -21,7 +21,8 @@ const SearchBar = ({ getSearch, searchTerm, setSearchTerm }) => {
         onChange={(e) => setSearchTerm(e.target.value)}
         value={searchTerm}
       />
-      <button className="search-icon" type="submit"><img src={searchIcon} alt="searchIcon" className="search-icon-size"  /></button>
+      <button className="search-icon" type="submit">
+        <img src={searchIcon} alt="searchIcon" className="search-icon-size"  /></button>
     </form>
    
   );

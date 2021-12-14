@@ -39,7 +39,7 @@ a {
   margin-top: 15px;
 }
 
-@media (max-width: 990px) {
+/* @media (max-width: 990px) {
   .search-bar {
     grid-column: 5;
  width: 100px;
@@ -58,4 +58,4 @@ a {
     margin-top: 5px;
     margin-right: 10px;
   }
-}
+} */
